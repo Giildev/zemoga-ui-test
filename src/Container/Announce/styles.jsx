@@ -35,7 +35,6 @@ export const TitleBold = styled.div`
 export const AnnounceContent = styled.div`
   font-size: 1.6rem;
   font-weight: 100;
-  max-width: 60%;
   @media (max-width: 768px) {
     font-size: 1.2rem;
     max-width: 66%;
