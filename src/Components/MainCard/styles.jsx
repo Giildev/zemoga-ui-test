@@ -80,6 +80,10 @@ export const VoteBox = styled.div`
 export const Upvote = styled.div`
   flex: 1 1 auto;
   background-color: var(--green);
+  ${({ voted }) =>
+    voted && {
+      border: "solid .2rem var(--white)",
+    }}
   &:hover {
     cursor: pointer;
   }
@@ -87,6 +91,10 @@ export const Upvote = styled.div`
 export const Downvote = styled.div`
   flex: 1 1 auto;
   background-color: var(--yellow);
+  ${({ voted }) =>
+    voted === false && {
+      border: "solid .2rem var(--white)",
+    }}
   &:hover {
     cursor: pointer;
   }

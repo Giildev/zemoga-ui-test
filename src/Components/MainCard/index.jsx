@@ -1,5 +1,5 @@
 // Dependencies
-import React from "react";
+import React, { useState } from "react";
 
 // Components
 
@@ -20,6 +20,7 @@ import {
 } from "./styles";
 
 const MainCard = (props) => {
+  const [voted, setVoted] = useState(null);
   return (
     <Box>
       <BoxContainer>
@@ -37,8 +38,8 @@ const MainCard = (props) => {
         <CTAText>What’s Your Verdict?</CTAText>
       </BoxContainer>
       <VoteBox>
-        <Upvote></Upvote>
-        <Downvote></Downvote>
+        <Upvote voted={voted} onClick={() => setVoted(true)}></Upvote>
+        <Downvote voted={voted} onClick={() => setVoted(false)}></Downvote>
       </VoteBox>
     </Box>
   );
