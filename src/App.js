@@ -1,25 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  GlobalStyle,
+  Landing,
+  ContentSpace,
+  AnnouncePosition,
+  PreviousTitle,
+  NewHeroeSpace,
+  NewHeroeBlur,
+  NewHeroeText,
+  Button,
+  ButtonText,
+  DottedLine,
+} from "./styles";
+
+//Containers
+import Header from "./Container/Header";
+import Main from "./Container/Main";
+import Announce from "./Container/Announce";
+import HeroeSection from "./Container/HeroeSection";
+import Footer from "./Container/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+      <Landing>
+        <Header />
+        <Main />
+      </Landing>
+      <ContentSpace>
+        <AnnouncePosition>
+          <Announce />
+        </AnnouncePosition>
+        <PreviousTitle>Previous Ruling</PreviousTitle>
+        <HeroeSection />
+        <NewHeroeSpace>
+          <NewHeroeBlur>
+            <NewHeroeText>
+              Is there anyone else you would want us to add?
+            </NewHeroeText>
+            <Button>
+              <ButtonText>Submit Name</ButtonText>
+            </Button>
+          </NewHeroeBlur>
+        </NewHeroeSpace>
+        <DottedLine />
+        <Footer />
+      </ContentSpace>
+    </>
   );
 }
 
